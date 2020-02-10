@@ -5,7 +5,8 @@
   button {
     height: 7vh;
     &:hover {
-      background-color: rgba(212, 0, 255, 0.37);
+      background-color: rgba(0, 174, 255, 0.363);
+
     }
   }
   .calculator-num-keys {
@@ -19,8 +20,10 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 2px;
     padding: 2px;
+    button {
     &:hover {
-        background-color: rgba(0, 174, 255, 0.363);
+      background-color: rgba(212, 0, 255, 0.37);
       }
+    }
   }
 }
