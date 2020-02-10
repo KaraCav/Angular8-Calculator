@@ -14,6 +14,7 @@ export class CalculatorComponent implements OnInit {
   // waitForSecondNumber = false;
   userInputString = "";
   isOperator: boolean;
+  operatorSelected = [];
 
   public isAnOperator(userInput: string) {
     this.isOperator = (userInput === "+" || userInput === "-" || userInput === "*" || userInput === "/")
@@ -30,6 +31,9 @@ public getInput(userInput: string) {
     }
   else {
     this.userInputString = this.userInputString + userInput;
+  }
+  if(this.isAnOperator) {
+    this.operatorSelected.push(userInput);
   }
   if(!this.isAnOperator(userInput) && !isEqualToZero) {
     this.displayNumber = this.displayNumber + userInput;
@@ -52,7 +56,7 @@ public getInput(userInput: string) {
   //   console.log('get number display', this.displayNumber);
   // }
 public getOperator(v: string) {
-
+  this.userInputString
 }
 
   // public getOperator(v: string) {
@@ -74,13 +78,20 @@ public getOperator(v: string) {
   //       this.displayNumber = this.integerNumber2 + "";
   //     }
   // }
-  // public allClear() {
-  //   this.integerNumber1 = 0;
-  //   this.displayNumber = '0';
-  // }
+  
+  public allClear() {
+    //this.integerNumber1 = 0;
+    this.displayNumber = '0';
+  }
 
    public itEquals() {
+     console.log(this.userInputString);
+   let myVar = this.userInputString.split(/[^0-9]/);
+    console.log(myVar);
+    for (let i = 0; i < myVar.length; i++) {
 
+      this.operatorSelected[i];
+    }
   }
 
 
