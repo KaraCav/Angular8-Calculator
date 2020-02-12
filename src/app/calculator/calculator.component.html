@@ -1,35 +1,29 @@
 <div class="calculator">
+  <input type="text" class="calculator-screen" [value]="displayNumber" />
 
-    <input type="text" class="calculator-screen" [value]="displayNumber" />
-  
-    <div class="calculator-num-keys">
-  
-      <button type="button" (click)="getInput('7')">7</button>
-      <button type="button" (click)="getInput('8')">8</button>
-      <button type="button" (click)="getInput('9')">9</button>
-  
-      <button type="button" (click)="getInput('4')">4</button>
-      <button type="button" (click)="getInput('5')">5</button>
-      <button type="button" (click)="getInput('6')">6</button>
-  
-      <button type="button" (click)="getInput('1')">1</button>
-      <button type="button" (click)="getInput('2')">2</button>
-      <button type="button" (click)="getInput('3')">3</button>
-  
-      <button type="button" class="all-clear" (click)="allClear()">AC</button>
-      <button type="button" (click)="getInput('0')">0</button>
-      <button type="button" class="decimal" (click)="getInput('.')">.</button>
-   
-    </div>
+  <div class="calculator-num-keys">
+    <button type="button" (click)="getNumber('7')">7</button>
+    <button type="button" (click)="getNumber('8')">8</button>
+    <button type="button" (click)="getNumber('9')">9</button>
 
-    <div class="calculator-sign-keys">
+    <button type="button" (click)="getNumber('4')">4</button>
+    <button type="button" (click)="getNumber('5')">5</button>
+    <button type="button" (click)="getNumber('6')">6</button>
 
-      <button type="button" class="operator" (click)="getInput('+')">+</button>
-      <button type="button" class="operator" (click)="getInput('-')">-</button>
-      <button type="button" class="operator" (click)="getInput('*')">&times;</button>
-      <button type="button" class="operator" (click)="getInput('/')">&divide;</button>
-      <button type="button" class="equal-sign" (click)="itEquals()" value="=">=</button>
+    <button type="button" (click)="getNumber('1')">1</button>
+    <button type="button" (click)="getNumber('2')">2</button>
+    <button type="button" (click)="getNumber('3')">3</button>
 
-    </div>
+    <button type="button" class="all-clear" (click)="allClear()">AC</button>
+    <button type="button" (click)="getNumber('0')">0</button>
+    <button type="button" class="decimal" (click)="getNumber('.')">.</button>
+ 
   </div>
-  
+  <div class="calculator-sign-keys">
+    <button type="button" class="operator" (click)="getOperator('+')">+</button>
+    <button type="button" class="operator" (click)="getOperator('-')">-</button>
+    <button type="button" class="operator" (click)="getOperator('*')">&times;</button>
+    <button type="button" class="operator" (click)="getOperator('/')">&divide;</button>
+    <button type="button" class="equal-sign" (click)="itEquals()" value="=">=</button>
+  </div>
+</div>
